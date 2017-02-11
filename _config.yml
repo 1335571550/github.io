@@ -42,3 +42,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
+
+theme: jekyll-theme-cayman
