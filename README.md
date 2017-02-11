@@ -1,28 +1,53 @@
-#Project Pages
+# Jekyll-Avalon
+[Demo](http://joshuaavalon.github.io/Jekyll-Avalon)
+![](https://raw.githubusercontent.com/joshuaavalon/Jekyll-Avalon/master/_screenshot/001.png)
 
-Project Pages is Jekyll Template specifically geared towards collaborative science. For more information, click [here](https://github.com/projectpages/project-pages/wiki/).
+## About
+Jekyll-Avalon is a [Materialize](https://github.com/dogfalo/materialize) Jekyll theme.
 
-# Nav Bar Jumbles
+Featuring:
+* Material Design
+* Responsive Web Design
+* Tags and categories browsing
+* Lazy loading images
 
-If you have seemingly random pages popping up on your Nav Bar recently, this is due to the fact that GitHub/Jekyll changed a fundemental rule they used to render pages. 
+## Installation
+This theme **CANNOT** be built by GitHub. You have to build it yourself.
+Please follows the following question.
 
-## CAUSE:
-It used to be that if a markdown file didn't have `---` frontmatter at the beginning, it wasn't rendered as a page. This was changed very recently (like in the last 2 days) so that every markdown file anywhere no matter what gets rendered as a page.  
+1. Are you willing to do extra works other than just blogging?
 
-## FIX:
+ Yes > 3
+ 
+ No > 2
 
-1) Go to:
+2. Are you willing to other git service like GitLab?
 
-`project-pages/plugin/markdown/` or `yourreponame/plugin/markdown/` and delete `example.html` and `example.md` files. This can be done graphically for the non-Git-savvy by simply going to your:
+ Yes > Upload this repository to GitLab. It will auto-deploy like GitHub. Make sure you have turn on the GitLab Runner.
+ 
+ No > This theme is not for you.
 
-GitHub account -> Your Profile -> Repositories -> Project-Pages/Your Repo -> Pluging -> Markdown 
+3. Install Ruby if you don't have it. In you are using Windows, you may want to try [Ruby Installer](http://rubyinstaller.org/).
 
-and clicking on the files, then clicking on the "thrash can / delete this file" icon on the top right corner of the file.
+4. Install Jekyll and Bundler if you don't have it. Run the following commands in command prompt to install the packages.
+ ```
+ gem install jekyll bundler
+ ```
 
-2) You need to change the `LICENSES.md` at:
+5. cd to your repository directory. Run the following command in command prompt to build.
+ ```
+ bundle exec jekyll serve
+ ```
+6. Upload the content in `_site` to GitHub or your host.
 
-GitHub account -> Your Profile -> Repositories -> Project-Pages/Your Repo
+## Config
+Change everything you need in `_config.yml`. Change the footer in `_includes/footer.html`.
 
-to `License.md` by clicking on the file and changing the name.
+If you want to change the color, go [here](https://github.com/dogfalo/materialize) to download SASS version 
+and replace the link in `_includes/head.html`.
 
-The fixes are already implemented here so new forks won't have a problem, and old forks should be able merge without conflict if they know how to.
+For comment support, you can use [Disqus](https://disqus.com/) and add the embed code to `_layouts/post.html`.
+Same for Google Analytics, add the embed code to `_includes/script.html`.
+
+## Post
+All the usable fields available are in `2016-10-27-welcome-to-jekyll.markdown`.
